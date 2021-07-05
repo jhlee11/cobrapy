@@ -1,10 +1,14 @@
-"""Test functionalities of gap filling."""
+# -*- coding: utf-8 -*-
+
+"""Test functionalities of gapfilling."""
+
+from __future__ import absolute_import
 
 from cobra.core import Metabolite, Model, Reaction
 from cobra.flux_analysis.gapfilling import GapFiller, gapfill
 
 
-def test_gapfilling(salmonella: Model) -> None:
+def test_gapfilling(salmonella):
     """Test Gapfilling."""
     m = Model()
     m.add_metabolites([Metabolite(m_id) for m_id in ["a", "b", "c"]])
